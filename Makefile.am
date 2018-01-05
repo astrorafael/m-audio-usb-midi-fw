@@ -3,6 +3,7 @@ AUTOMAKE_OPTIONS = foreign
 
 udevrulesdir = @UDEV_RULES_DIR@
 firmwaredir = $(datadir)/usb/maudio
+usbsubsystem = usb_subsystem
 
 udevrules_DATA = 42-midisport-firmware.rules
 dist_firmware_DATA = MidiSportLoader.ihx \
@@ -22,6 +23,7 @@ all-local: files.list
 	rm -f $@ $@.tmp
 	sed -e 's,@firmwaredir\@,$(firmwaredir),g' \
 		-e 's,@fxload\@,$(FXLOAD),g' \
+		-e 's,@usbsubsystem\@,$(usbsubsystem),g' \
 		$(srcdir)/42-midisport-firmware.rules.in > $@.tmp
 	mv $@.tmp $@
 

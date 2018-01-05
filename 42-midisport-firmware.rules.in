@@ -3,13 +3,13 @@
 ## tested with Radium 61 on linux kernel 4.1.3 \ udev 219 
 
 # MidiSport 2x2
-ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1001", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport2x2.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="@usbsubsystem@" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1001", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport2x2.ihx -D $env{DEVNAME}"
 # MidiSport 1x1
-ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1010", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport1x1.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="@usbsubsystem@" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1010", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport1x1.ihx -D $env{DEVNAME}"
 # KeyStation Radium\Oxygen
-ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1014", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSportKS.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="@usbsubsystem@" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1014", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSportKS.ihx -D $env{DEVNAME}"
 # MidiSport 4x4
-ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1020", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport4x4.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="@usbsubsystem@" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1020", RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport4x4.ihx -D $env{DEVNAME}"
 # MidiSport 8x8
-ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0110",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.10.ihx -D $env{DEVNAME}"
-ACTION=="add", SUBSYSTEM=="usb_device" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0121",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.2.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="@usbsubsystem@" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0110",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.10.ihx -D $env{DEVNAME}"
+ACTION=="add", SUBSYSTEM=="@usbsubsystem@" ATTRS{idVendor}=="0763", ATTRS{idProduct}=="1031", ATTRS{bcdDevice}=="0121",  RUN+="@fxload@ -s @firmwaredir@/MidiSportLoader.ihx -I @firmwaredir@/MidiSport8x8-2.2.ihx -D $env{DEVNAME}"
