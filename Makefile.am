@@ -3,7 +3,7 @@ AUTOMAKE_OPTIONS = foreign
 
 udevrulesdir = @UDEV_RULES_DIR@
 firmwaredir = $(datadir)/usb/maudio
-usbsubsystem = usb_subsystem
+usbsubsystem = usb
 
 udevrules_DATA = 42-midisport-firmware.rules
 dist_firmware_DATA = MidiSportLoader.ihx \
